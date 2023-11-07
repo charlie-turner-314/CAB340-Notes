@@ -1,4 +1,4 @@
-> A type of [[Polyalphabetic Substitution]] cipher. [[Lecture 2]]
+> A type of [[Polyalphabetic Substitution]] cipher. [[Lecture 02]]
 
 - Use d different mappings depending on the position of the letter in the plaintext.
 - Let the key specify

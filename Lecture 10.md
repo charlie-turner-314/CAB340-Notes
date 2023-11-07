@@ -49,9 +49,10 @@ Using degree-3 relations:
 $$
 y^{2}=x^{3}+ax+b
 $$
-The set of points on an elliptic curve *almost* forms a group
-If you connect 2 points on a curve of degree 3, there must be another point if you extend the straight line. (**Unless the line is vertical**)
-> Use this to define the operation for the group
+![[Pasted image 20231105215359.png]]
+The set of points on an elliptic curve *almost* forms a group.
+If you connect 2 points on a curve of degree 3, there must be another point if you extend the straight line. (**Unless the line is vertical**). e.g Taking two points, you can find a (unique) other point on the curve.
+> Use this to define the operation for the group:
 
 $$
 P_{1}\odot P_{2}=P_{3}
@@ -60,22 +61,22 @@ Where
 - $P_1$ and $P_{2}$ are two points on the curve, 
 - $\odot$ is the binary operator, extending the straight line that joins the two points
 - $P_{3}$ is the result (also provably on the curve).
-
+**But, what if your point is vertical? Then it might only go through 2 points!**
 Fix the group by defining a point at infinity where all vertical lines intersect - $O$.  
 	Made up point to fix the vertical line problem
-	Maybe not quite made up, the elliptic curve goes vertical, so therefore any vertical line will intersect at infinity
+	Maybe not quite made up, the elliptic curve goes vertical, so therefore any vertical line will intersect at $y=\infty$ infinity
  **But how is this a Field? $P_{1}\odot O \ne P_{1}$ , there isn't an identity!**
- > Because of the vertical symmetry, just change $\odot$. 
+ > Because of the vertical symmetry, just change $\odot$ to be:
  > 1. Join the two points with a straight line
  > 2. Extend the line onto another (different) point
  > 3. Mirror it over the x axis (take the negative)
  
 $$
 \begin{align} 
-P+Q &:= -R, \text{with P, Q, R aligned on the curve} \\
-P+ (-P) &= -O := O \\
-P + O &= -P := P \\
-O + O  &= O
+P+Q &= R, &\text{with P, Q, and $-R$ aligned on the curve} \\
+P+ (-P) &= -O := O &\quad \text{Vertical line}\\
+P + O &= -P := P &\quad \text{Operating on $O$}\\
+O + O  &= O &\quad \text{Double $O$ is $O$}
 \end{align} 
 $$
 ### Calculating the Group Operation
@@ -83,7 +84,8 @@ $$
 $$
 \begin{align}
 y &= \lambda x +v \quad \text{ Standard form of a straight line} \\
-\text{complicated equation....}\\
+&\text{complicated equation....}\\
+&\text{calculating and proving the slope....}\\
 x_{R}&= \lambda^{2}-x_{1}-x_{2}\\
 y_{R}&= -(\lambda x_{R}+ v)
 \end{align}
@@ -98,8 +100,7 @@ $$
 2. Same definition/calculations as the reals, but with ints
 3. Not a curve (disjoint cause only integers)
 4. $|E|$ (number of points) close to $p$, in the range $p+1 \pm 2\sqrt{p}$ 
-
-Basically, all the *integer $\bmod p$*   points that satisfy the same equation. 
+Basically, all the *integer $\bmod p$*   points that satisfy the same equation as before. 
 **Example:**
 For $a=3$, $b=2$, $p=7$:
 $$
@@ -111,7 +112,7 @@ y&= 4 \quad ( 4^{2} = 16 = 7*2 + 2)\\
 y&= 3 \quad ( 3^{2} = 9 = 7 + 2) \\
 &\text{For x=1} \\
 y^{2}&= 1^{3}+3(1)+2 = 8 \equiv 1 \mod 7\\
-y&= \text{NOTHING}\\
+y&= \text{nothing works $\bmod 7$}\\
 &\text{For x=2} \\
 y^{2}&= 2^{3}+3(2)+2 = 16 \equiv 2 \mod 7\\
 y&= \text{same as for $x=0$}

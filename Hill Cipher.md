@@ -1,4 +1,4 @@
-[[Lecture 2#Polygraphic Ciphers]] based on linear transformation
+[[Lecture 02#Polygraphic Ciphers]] based on linear transformation
 Operates on $d$-graphs viewed as vectors
 key is a $d\times d$ matrix
 Produces vectors of ciphertext
